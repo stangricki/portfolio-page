@@ -113,7 +113,7 @@ nav {
 
 /* SKILLS */
 #skills {
-  margin: 0 50px; }
+  margin: 0 60px; }
   #skills [class^="skill-bg-"] {
     min-height: 200px;
     background-repeat: no-repeat;
