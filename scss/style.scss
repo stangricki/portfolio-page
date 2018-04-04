@@ -164,6 +164,16 @@ nav {
 	}
 }
 
+/* HOME */
+
+#home {
+		margin: 0 $nav-size-nav;
+	.home-bg {
+		height: 100vh;
+		background: #AA0000 url(../images/home/home_bg.jpg) center/cover no-repeat;
+	}
+}
+
 /* SKILLS */
 #skills {
 	margin: 0 60px;
