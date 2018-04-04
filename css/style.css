@@ -114,9 +114,14 @@ nav {
 /* HOME */
 #home {
   margin: 0 60px; }
-  #home .home-bg {
+  #home #particles-js {
+    width: 100%;
     height: 100vh;
-    background: #AA0000 url(../images/home/home_bg.jpg) center/cover no-repeat; }
+    background-color: #b61924;
+    background-image: url("../images/home/home_bg.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat; }
 
 /* SKILLS */
 #skills {

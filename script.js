@@ -1,3 +1,9 @@
+
+/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+particlesJS.load('particles-js', 'assets/particles.json', function() {
+  console.log('callback - particles.js config loaded');
+});
+
 const links = Array.from(document.querySelectorAll('.tabnav'));
 
 links.forEach(link => link.addEventListener('click', function () {
