@@ -1,0 +1,196 @@
+/*_GENERAL*/
+/*_NAVIGATION*/
+/*_NAVIGATION_LEFT_SIDE*/
+/*_NAVIGATION_LOGO*/
+/*_NAVIGATION_MENU*/
+/*_NAVIGATION_RIGHT_SIDE*/
+/*_HEADER*/
+@import url("https://fonts.googleapis.com/css?family=Mina|Permanent+Marker");
+/*_GENERAL*/
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0; }
+
+/*_NAVIGATION*/
+nav {
+  /*_NAVIGATION_LEFT_SIDE*/
+  /*_NAVIGATION_RIGHT_SIDE*/ }
+  nav .navigation {
+    width: 60px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background: #222;
+    color: #DDD;
+    box-shadow: 0 0 5px 1px grey; }
+  nav .left-navigation {
+    /*_NAVIGATION_MENU*/ }
+    nav .left-navigation .nav-menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+      nav .left-navigation .nav-menu .tabnav-active .fa, nav .left-navigation .nav-menu .tabnav-active .navwo {
+        color: green;
+        text-shadow: 1px 1px lightgreen; }
+      nav .left-navigation .nav-menu li {
+        position: relative;
+        height: 60px;
+        line-height: 60px;
+        text-align: center; }
+        nav .left-navigation .nav-menu li a {
+          display: block;
+          color: black;
+          text-decoration: none;
+          text-transform: uppercase; }
+          nav .left-navigation .nav-menu li a .fa, nav .left-navigation .nav-menu li a .navwo {
+            transition: 0.3s;
+            text-shadow: 1px 1px 2px grey; }
+          nav .left-navigation .nav-menu li a .fa {
+            font-size: 30px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #DDD; }
+          nav .left-navigation .nav-menu li a .navwo {
+            opacity: 0;
+            font-family: "Mina", sans-serif;
+            color: #DDD;
+            font-size: 12px; }
+          nav .left-navigation .nav-menu li a:hover .fa {
+            opacity: 0; }
+          nav .left-navigation .nav-menu li a:hover .navwo {
+            opacity: 1; }
+  nav .right-navigation {
+    right: 0; }
+    nav .right-navigation .social-menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+      nav .right-navigation .social-menu [class^="icon"] {
+        line-height: 60px;
+        text-align: center; }
+        nav .right-navigation .social-menu [class^="icon"] a {
+          height: 45px;
+          line-height: 45px;
+          width: 45px;
+          font-size: 24px;
+          color: #DDD;
+          background-color: #222;
+          display: inline-block;
+          box-shadow: 0 0 5px 1px #DDD;
+          text-shadow: 1px 1px 2px #555;
+          transition-duration: .5s;
+          border-radius: 50%; }
+        nav .right-navigation .social-menu [class^="icon"]:hover a {
+          background-color: #FFF;
+          transform: rotateY(360deg);
+          border-radius: 50%; }
+      nav .right-navigation .social-menu [class^="icon-face"]:hover a {
+        box-shadow: 0 0 15px 8px #3B5998;
+        color: #3B5998; }
+      nav .right-navigation .social-menu [class^="icon-git"]:hover a {
+        box-shadow: 0 0 15px 8px #323131;
+        color: #323131; }
+      nav .right-navigation .social-menu [class^="icon-link"]:hover a {
+        box-shadow: 0 0 15px 8px #0077B5;
+        color: #000; }
+      nav .right-navigation .social-menu [class^="icon"]:active a {
+        background-color: #fff;
+        box-shadow: 0 0 20px 10px #000;
+        color: #000; }
+
+/* SKILLS */
+#skills {
+  margin: 0 50px; }
+  #skills [class^="skill-bg-"] {
+    min-height: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: relative;
+    margin: 0.5rem; }
+    #skills [class^="skill-bg-"] .skills-overlay {
+      border-radius: 15px;
+      height: 200px;
+      width: 100%;
+      transition: all 0.4s; }
+    #skills [class^="skill-bg-"]:hover .skills-overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      box-shadow: 0 0 5px 2px #666; }
+    #skills [class^="skill-bg-"] .skill-name {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      color: #FFF;
+      transition: all 0.4s;
+      text-shadow: 0 0 5px #FFF;
+      text-align: center; }
+    #skills [class^="skill-bg-"]:hover .skill-name {
+      opacity: 1; }
+  #skills .skill-bg-html {
+    background-image: url(../images/skills/html5.png); }
+  #skills .skill-bg-css {
+    background-image: url(../images/skills/css3.png); }
+  #skills .skill-bg-js {
+    background-image: url(../images/skills/javascript.png);
+    border-radius: 15px; }
+  #skills .skill-bg-git {
+    background-image: url(../images/skills/git.png); }
+  #skills .skill-bg-node {
+    background-image: url(../images/skills/node.png); }
+  #skills .skill-bg-npm {
+    background-image: url(../images/skills/npm.png); }
+  #skills .skill-bg-sublime {
+    background-image: url(../images/skills/sublime.png); }
+  #skills .skill-bg-react {
+    background-image: url(../images/skills/react.png); }
+  #skills .skill-bg-rwd {
+    background-image: url(../images/skills/rwd.png); }
+  #skills .skill-bg-express {
+    background-image: url(../images/skills/express.png); }
+  #skills .skill-bg-sass {
+    background-image: url(../images/skills/sass.png); }
+  #skills .skill-bg-ajax {
+    background-image: url(../images/skills/ajax.png); }
+  #skills .skill-bg-mongodb {
+    background-image: url(../images/skills/mongodb.png); }
+  #skills .skill-bg-jquery {
+    background-image: url(../images/skills/jquery.png); }
+  #skills .skill-bg-bootstrap {
+    background-image: url(../images/skills/bootstrap.png); }
+
+/* WORK */
+#work {
+  text-align: center; }
+  #work a img {
+    margin-bottom: 5px; }
+
+.contact {
+  width: 500px;
+  padding: 20px; }
+  .contact input, .contact textarea {
+    margin: 10px;
+    padding: 10px;
+    width: 100%; }
+  .contact button {
+    float: right; }
+
+.tabcontent {
+  display: none; }
+
+.tabcontent-active {
+  display: none; }

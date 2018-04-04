@@ -1,0 +1,246 @@
+// Main Sass File
+// TABLE OF CONTENTS
+/*_GENERAL*/
+/*_NAVIGATION*/
+	/*_NAVIGATION_LEFT_SIDE*/
+		/*_NAVIGATION_LOGO*/ // Not available at the moment
+		/*_NAVIGATION_MENU*/
+	/*_NAVIGATION_RIGHT_SIDE*/
+/*_HEADER*/
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Mina|Permanent+Marker');
+
+//SASS variables
+	//NAV variables
+		//COLORS
+$nav-colors-bgc: #222;
+$nav-colors-font: #DDD;
+
+		//FONTS
+$nav-font-portfolio: 'Mina', sans-serif;
+
+		//SIZES
+$nav-size-nav: 60px;
+$nav-size-logo: (0.3 * $nav-size-nav);
+$nav-size-icons: (0.50 * $nav-size-nav);
+$nav-size-font: (0.2 * $nav-size-nav);
+$nav-size-socialIcons: $nav-size-icons * 1.5;
+
+
+$skill-height: 200px;
+// SASS - Mixins 
+	// NAV Mixins
+
+@mixin nav-menu {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	position:absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/*_GENERAL*/
+* {
+	box-sizing: border-box;
+	// outline: 1px solid red;
+}
+
+body {
+	margin: 0;
+}
+
+/*_NAVIGATION*/
+nav { 
+	.navigation {
+		width:  $nav-size-nav;
+		height: 100vh;
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		background: $nav-colors-bgc;
+		color: $nav-colors-font;
+		box-shadow: 0 0 5px 1px grey;
+	}
+	/*_NAVIGATION_LEFT_SIDE*/
+	.left-navigation { 
+		/*_NAVIGATION_MENU*/
+		.nav-menu {
+			@include nav-menu;
+			.tabnav-active .fa, .tabnav-active .navwo  {
+				color: green;
+				text-shadow: 1px 1px lightgreen; 
+			}
+			li {
+				position: relative;
+				height:  $nav-size-nav;
+				line-height:  $nav-size-nav;
+				text-align: center;
+				a {
+					display: block;
+					color: black;
+					text-decoration: none;
+					text-transform: uppercase;
+					.fa, .navwo {
+						transition: 0.3s;
+						text-shadow: 1px 1px 2px grey;
+					}
+
+					.fa {
+						font-size: $nav-size-icons;
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						color: $nav-colors-font;
+					}
+					.navwo {
+						opacity: 0;
+						font-family: $nav-font-portfolio;
+						color: $nav-colors-font;
+						font-size: $nav-size-font;
+					}
+
+					&:hover {
+						.fa {
+							opacity: 0;
+						}
+						.navwo {
+							opacity: 1;
+						}
+					}
+				}	
+			}
+		}
+	}
+	/*_NAVIGATION_RIGHT_SIDE*/
+	.right-navigation {
+			right:0;
+		.social-menu {
+			@include nav-menu;
+			[class^="icon"] {
+				line-height: $nav-size-nav;
+				text-align: center;
+				a {
+					height: $nav-size-socialIcons;
+					line-height: $nav-size-socialIcons;
+					width: $nav-size-socialIcons;
+					font-size: $nav-size-font * 2;
+					color: $nav-colors-font;
+					background-color: $nav-colors-bgc;
+					display: inline-block;
+					box-shadow: 0 0 5px 1px $nav-colors-font;
+					text-shadow: 1px 1px 2px #555;
+					transition-duration: .5s;
+					border-radius: 50%;
+				}
+				&:hover a {
+					background-color: #FFF;
+					transform:rotateY(360deg);
+					border-radius: 50%;
+				}
+			}
+			[class^="icon-face"]:hover a {
+				box-shadow: 0 0 15px 8px #3B5998;
+				color: #3B5998;
+			}
+			[class^="icon-git"]:hover a {
+				box-shadow: 0 0 15px 8px #323131;
+				color: #323131;
+			}
+			[class^="icon-link"]:hover a {
+				box-shadow: 0 0 15px 8px #0077B5;
+				color: #000;
+			}
+			[class^="icon"]:active a{
+				background-color: #fff;
+				box-shadow: 0 0 20px 10px #000;
+				color: #000;
+			}
+		}
+	}
+}
+
+/* SKILLS */
+#skills {
+	margin: 0 50px;
+	[class^="skill-bg-"] {
+		min-height:$skill-height;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size:contain;
+		position: relative;
+		margin: 0.5rem;
+
+		.skills-overlay {
+			border-radius: 15px;
+			height:$skill-height;
+			width: 100%;
+			transition: all 0.4s;
+
+		}
+		&:hover .skills-overlay {
+			background-color: rgba(0, 0, 0, 0.6);
+			box-shadow: 0 0 5px 2px #666;
+		}
+		.skill-name {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			opacity: 0;
+			color: #FFF;
+			transition: all 0.4s;
+			text-shadow: 0 0 5px #FFF;
+			text-align: center;
+		}
+		&:hover .skill-name {
+			opacity: 1;
+		}
+	}
+	.skill-bg-html {background-image: url(../images/skills/html5.png)}
+	.skill-bg-css {background-image: url(../images/skills/css3.png)}
+	.skill-bg-js {background-image: url(../images/skills/javascript.png); border-radius: 15px;}
+	.skill-bg-git {background-image: url(../images/skills/git.png)}
+	.skill-bg-node {background-image: url(../images/skills/node.png)}
+	.skill-bg-npm {background-image: url(../images/skills/npm.png)}
+	.skill-bg-sublime {background-image: url(../images/skills/sublime.png)}
+	.skill-bg-react {background-image: url(../images/skills/react.png)}
+	.skill-bg-rwd {background-image: url(../images/skills/rwd.png)}	
+	.skill-bg-express {background-image: url(../images/skills/express.png)}
+	.skill-bg-sass {background-image: url(../images/skills/sass.png)}
+	.skill-bg-ajax {background-image: url(../images/skills/ajax.png)}
+	.skill-bg-mongodb {background-image: url(../images/skills/mongodb.png)}
+	.skill-bg-jquery {background-image: url(../images/skills/jquery.png)}
+	.skill-bg-bootstrap {background-image: url(../images/skills/bootstrap.png)}
+}
+
+/* WORK */
+#work {
+	text-align: center;
+	a {
+		img {margin-bottom: 5px}
+	}
+}
+
+// CONTACT FORM
+.contact {
+	width: 500px;
+	padding: 20px;
+	input, textarea {
+		margin: 10px;
+		padding: 10px;
+		width: 100%;
+	}
+	button {
+		float: right;	
+	}
+}
+
+// inne
+.tabcontent {display: none}
+.tabcontent-active {display: none}
+
