@@ -113,10 +113,11 @@ nav {
 
 /* HOME */
 #home {
-  margin: 0 60px; }
+  margin: 0 60px;
+  height: 100vh; }
   #home #particles-js {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: #b61924;
     background-image: url("../images/home/home_bg.jpg");
     background-size: cover;
