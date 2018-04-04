@@ -1,4 +1,8 @@
 
+
+
+$(document).ready(function() {
+
 const links = Array.from(document.querySelectorAll('.tabnav'));
 $('.tabcontent-active').fadeIn();
 links.forEach(link => link.addEventListener('click', function () {
@@ -15,3 +19,7 @@ links.forEach(link => link.addEventListener('click', function () {
     document.getElementById(link.dataset.target).classList.add('tabcontent-active'); 
 		$('.tabcontent-active').fadeIn();
 }));
+
+
+
+});
