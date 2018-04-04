@@ -13,6 +13,8 @@
 @import url('https://fonts.googleapis.com/css?family=Mina|Permanent+Marker');
 
 //SASS variables
+$tablets: "(min-width: 768px) and (max-width: 1199px)";
+$phones: "(max-width: 767px)";
 	//NAV variables
 		//COLORS
 $nav-colors-bgc: #222;
@@ -65,7 +67,8 @@ nav {
 		bottom: 0;
 		background: $nav-colors-bgc;
 		color: $nav-colors-font;
-		box-shadow: 0 0 5px 1px grey;
+		box-shadow: 0 0 4px 2px $nav-colors-bgc;
+		z-index: 1;
 	}
 	/*_NAVIGATION_LEFT_SIDE*/
 	.left-navigation { 
@@ -167,32 +170,52 @@ nav {
 }
 
 /* HOME */
-@import url('https://fonts.googleapis.com/css?family=Cutive+Mono');
+@import url('https://fonts.googleapis.com/css?family=Lato');
 #home {
 		margin: 0 $nav-size-nav;
-		height:100vh;
+		height: 100vh;
 		position: relative;
 		overflow: hidden;
 	#particles-js{
 	  width: 100%;
 	  height: 100%;
-	  background-color: #b61924;
-	  background-image: url('../images/home/home_bg.jpg');
+	  background-color: #CCC;
+	  background-image: url('../images/home/home_bg.jpeg');
 	  background-size: cover;
 	  background-position: 50% 50%;
 	  background-repeat: no-repeat;
 	}
 	.home-slogan {
 		position: absolute;
-		top: 20%;
-		left: 51%;
+		top: 50%;
+		left: 25%;
 		transform: translate(-50%, -50%);
-		font-family: 'Cutive Mono', monospace;
-		text-align: center;
-		color: #FFF;
-		text-shadow: 0 0 5px #000;
+		.home-slogan-text {
+			font-family: 'Lato', sans-serif;
+			font-size: 50px;
+			// text-align: center;
+			color: #FFF;
+			text-shadow: 0 0 5px #000;
+		}
+	}
+	@media #{$tablets} {
+	.home-slogan {
+			top: 65%;
+			left: 35%;
+		}
+	}
+	@media #{$phones} {
+		.home-slogan {
+			top: 65%;
+			left: 50%;
+			.home-slogan-text {
+				font-size: 40px;
+			}
+		}
 	}
 }
+
+
 
 
 
