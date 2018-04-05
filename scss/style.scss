@@ -9,8 +9,7 @@
 /*_HEADER*/
 
 
-@import url('https://fonts.googleapis.com/css?family=Lato');
-@import url('https://fonts.googleapis.com/css?family=Mina|Permanent+Marker');
+@import url('https://fonts.googleapis.com/css?family=Mina|Permanent+Marker|Raleway|Lato');
 
 //SASS variables
 $tablets: "(min-width: 768px) and (max-width: 1199px)";
@@ -31,7 +30,7 @@ $nav-size-font: (0.2 * $nav-size-nav);
 $nav-size-socialIcons: $nav-size-icons * 1.5;
 
 // Colors #ff3838 #ffa502;
-$main-color: #e1b12c;
+$main-color: #F79F1F;
 
 $skill-height: 200px;
 // SASS - Mixins 
@@ -225,56 +224,7 @@ nav {
 
 /* SKILLS */
 #skills {
-	margin: 0 60px;
-	[class^="skill-bg-"] {
-		min-height:$skill-height;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size:contain;
-		position: relative;
-		margin: 0.5rem;
 
-		.skills-overlay {
-			border-radius: 15px;
-			height:$skill-height;
-			width: 100%;
-			transition: all 0.4s;
-
-		}
-		&:hover .skills-overlay {
-			background-color: rgba(0, 0, 0, 0.6);
-			box-shadow: 0 0 5px 2px #666;
-		}
-		.skill-name {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			opacity: 0;
-			color: #FFF;
-			transition: all 0.4s;
-			text-shadow: 0 0 5px #FFF;
-			text-align: center;
-		}
-		&:hover .skill-name {
-			opacity: 1;
-		}
-	}
-	.skill-bg-html {background-image: url(../images/skills/html5.png)}
-	.skill-bg-css {background-image: url(../images/skills/css3.png)}
-	.skill-bg-js {background-image: url(../images/skills/javascript.png); border-radius: 15px;}
-	.skill-bg-git {background-image: url(../images/skills/git.png)}
-	.skill-bg-node {background-image: url(../images/skills/node.png)}
-	.skill-bg-npm {background-image: url(../images/skills/npm.png)}
-	.skill-bg-sublime {background-image: url(../images/skills/sublime.png)}
-	.skill-bg-react {background-image: url(../images/skills/react.png)}
-	.skill-bg-rwd {background-image: url(../images/skills/rwd.png)}	
-	.skill-bg-express {background-image: url(../images/skills/express.png)}
-	.skill-bg-sass {background-image: url(../images/skills/sass.png)}
-	.skill-bg-ajax {background-image: url(../images/skills/ajax.png)}
-	.skill-bg-mongodb {background-image: url(../images/skills/mongodb.png)}
-	.skill-bg-jquery {background-image: url(../images/skills/jquery.png)}
-	.skill-bg-bootstrap {background-image: url(../images/skills/bootstrap.png)}
 }
 
 /* WORK */
@@ -345,8 +295,8 @@ nav {
 				position: absolute;
 				width: 200px;
 				bottom: -50%;
-				background-color: rgba(255, 177, 44, 0.6);
-				box-shadow: 0 0 3px 1px rgba(255, 177, 44, 0.8);
+				background-color: rgba(247, 159, 31, 0.6);
+				box-shadow: 0 0 3px 1px rgba(247, 159, 31, 0.8);
 				border-radius: 5px;
 			}
 		}
@@ -462,3 +412,178 @@ nav {
 .tabcontent-active {
 	display:block;
 }
+
+#skills {
+	background-color: #CCC;
+	margin: 0 $nav-size-nav;
+	padding-right: 50px;
+}
+	#hexGrid {
+	  display: flex;
+	  flex-wrap: wrap;
+	  width: 90%;
+	  margin: 0 auto;
+	  overflow: hidden;
+	  font-family: 'Raleway', sans-serif;
+	  font-size: 13.5px;
+	  list-style-type: none;
+	}
+
+	.hex {
+	  position: relative;
+	  visibility:hidden;
+	  outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
+	}
+	.hex::after{
+	  content:'';
+	  display:block;
+	  padding-bottom: 86.602%;  /* =  100 / tan(60) * 1.5 */
+	}
+	.hexIn{
+	  position: absolute;
+	  width:96%;
+	  padding-bottom: 110.851%; /* =  width / sin(60) */
+	  margin:0 2%;
+	  overflow: hidden;
+	  visibility: hidden;
+	  outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
+	  -webkit-transform: rotate3d(0,0,1,-60deg) skewY(30deg);
+	      -ms-transform: rotate3d(0,0,1,-60deg) skewY(30deg);
+	          transform: rotate3d(0,0,1,-60deg) skewY(30deg);
+	}
+	.hexIn * {
+		background-color: #FFF;
+	  position: absolute;
+	  visibility: visible;
+	  outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
+	}
+	#skills .hexLink {
+	    display:block;
+	    width: 100%;
+	    height: 100%;
+	    text-align: center;
+	    color: #fff;
+	    overflow: hidden;
+	    -webkit-transform: skewY(-30deg) rotate3d(0,0,1,60deg);
+	        -ms-transform: skewY(-30deg) rotate3d(0,0,1,60deg);
+	            transform: skewY(-30deg) rotate3d(0,0,1,60deg);
+	}
+
+	/*** HEX CONTENT **********************************************************************/
+	.hex img {
+	  top: 20%;
+	  transform: translate(-50%, -50%);
+	  left: -100%;
+	  right: -100%;
+	  width: 160px;
+	  margin: 0 auto;
+	  -webkit-transform: rotate3d(0,0,0,0deg);
+	      -ms-transform: rotate3d(0,0,0,0deg);
+	          transform: rotate3d(0,0,0,0deg);
+	}
+
+	.hex h1, .hex p {
+	  width: 100%;
+	  padding: 5%;
+	  box-sizing:border-box;
+	  background-color: rgba(0, 0, 0, 1); /* HERE CHANGE COLOR OF HEX BACKGROUND */
+	  font-weight: 300;
+	  -webkit-transition:  -webkit-transform .2s ease-out, opacity .3s ease-out;
+	          transition:          transform .2s ease-out, opacity .3s ease-out;
+	}
+	.hex h1 {
+	  bottom: 54%;  /* SOME WEIRD SHIT HERE */
+	  padding-top:50%;
+	  font-size: 1.5em;
+	  z-index: 1;
+	  -webkit-transform:translate3d(0,-120%,0);
+	      -ms-transform:translate3d(0,-120%,0);
+	          transform:translate3d(0,-120%,0);
+	}
+	.hex h1::after {
+	  content: '';
+	  position: absolute;
+	  bottom: 0;
+	  left: 45%;
+	  width: 10%;
+	  text-align: center;
+	}
+	.hex p {
+	  top: 40%; /* SOME WEIRD SHIT HERE */
+	  padding-bottom:50%;
+	  -webkit-transform:translate3d(0,120%,0);
+	      -ms-transform:translate3d(0,120%,0);
+	          transform:translate3d(0,120%,0);
+	}
+
+
+	/*** HOVER EFFECT  **********************************************************************/
+	.hexLink:hover h1, .hexLink:focus h1,
+	.hexLink:hover p, .hexLink:focus p{
+	  -webkit-transform:translate3d(0,0,0);
+	      -ms-transform:translate3d(0,0,0);
+	          transform:translate3d(0,0,0);
+	}
+
+	/*** HEXAGON SIZING AND EVEN ROW INDENTATION *****************************************************************/
+	@media (min-width:1201px) { /* <- 5-4  hexagons per row */
+	  #hexGrid{
+	    padding-bottom: 4.4%
+	  }
+	  .hex {
+	    width: 20%; /* = 100 / 5 */
+	  }
+	  .hex:nth-child(9n+6){ /* first hexagon of even rows */
+	    margin-left:10%;  /* = width of .hex / 2  to indent even rows */
+	  }
+	}
+
+	@media (max-width: 1200px) and (min-width:901px) { /* <- 4-3  hexagons per row */
+	  #hexGrid{
+	    padding-bottom: 7.4%
+	  }
+	  .hex {
+	    width: 33.333%; /* = 100 / 4 */
+	  }
+	  .hex:nth-child(5n+4){ /* first hexagon of even rows */
+	    margin-left:16.666%;  /* = width of .hex / 2  to indent even rows */
+	  }
+	}
+
+	@media (max-width: 900px) and (min-width:601px) { /* <- 3-2  hexagons per row */
+	  #hexGrid{
+	    padding-bottom: 11.2%
+	  }
+	  .hex {
+	    width: 50%; /* = 100 / 3 */
+	  }
+	  .hex:nth-child(3n+3){ /* first hexagon of even rows */
+	    margin-left:25%;  /* = width of .hex / 2  to indent even rows */
+	  }
+	  /* .hex p {font-size: 13px} */
+	}
+
+	@media (max-width: 600px) { /* <- 2-1  hexagons per row */
+		 #hexGrid {
+	  display: block;
+	  width: 100%;
+	}
+
+	.hex {
+	  position: relative;
+	  margin-bottom: 65px; /* fix for jagged edges in FF on hover transition */
+	}
+
+
+	/*** HEX CONTENT **********************************************************************/
+	.hex img {
+	  top: 50%;
+	  transform: translate(0, -50%);
+	  width: 100px;
+	}
+
+	.hex h1, .hex p {
+	 	font-size: 11.5px;
+	}
+	
+	}
