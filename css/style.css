@@ -9,8 +9,7 @@
 @import url("https://fonts.googleapis.com/css?family=Mina|Permanent+Marker");
 /*_GENERAL*/
 * {
-  box-sizing: border-box;
-  outline: 1px solid red; }
+  box-sizing: border-box; }
 
 body {
   margin: 0; }
