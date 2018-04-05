@@ -144,7 +144,7 @@ nav {
   @media (max-width: 767px) {
     #home .home-slogan {
       top: 75%;
-      left: 40%; }
+      left: 50%; }
       #home .home-slogan .home-slogan-text {
         font-size: 40px; } }
 
@@ -226,7 +226,8 @@ nav {
   border-radius: 10px;
   box-shadow: 0 0 10px 1px #FFF; }
   .work-segment img {
-    transition: transform 0.6s; }
+    transition: transform 0.6s;
+    object-fit: cover; }
   .work-segment:hover img {
     transform: translate3d(-30px, 0, 0) scale(1.12); }
   .work-segment .work-content {
@@ -263,6 +264,15 @@ nav {
           .work-segment .work-content .work-links a .fa:hover {
             color: #FFF;
             text-shadow: 0 0 3px #DDD; }
+      .work-segment .work-content .work-links .work-title {
+        font-family: 'Permanent Marker', cursive;
+        color: #FFF;
+        text-transform: uppercase;
+        position: absolute;
+        width: 200px;
+        bottom: -50%;
+        background-color: rgba(255, 177, 44, 0.4);
+        border-radius: 5px; }
   .work-segment:hover .work-content {
     opacity: 1; }
     .work-segment:hover .work-content .work-technologies {
