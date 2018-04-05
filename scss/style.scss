@@ -214,7 +214,11 @@ nav {
 		}
 	}
 }
-
+.home-slogan-name {
+	color: $main-color;
+	font-family: 'Permanent Marker', cursive;
+	text-shadow: 0 0 2px $main-color;
+}
 
 
 
@@ -336,11 +340,13 @@ nav {
 			.work-title {
 				font-family: 'Permanent Marker', cursive;
 				color: #FFF;
+				text-shadow: 0 0 1px #555;
 				text-transform: uppercase;
 				position: absolute;
 				width: 200px;
 				bottom: -50%;
-				background-color: rgba(255, 177, 44, 0.4);
+				background-color: rgba(255, 177, 44, 0.6);
+				box-shadow: 0 0 3px 1px rgba(255, 177, 44, 0.8);
 				border-radius: 5px;
 			}
 		}
@@ -385,9 +391,6 @@ nav {
 	}
 }
 
-.main-color {
-	color: $main-color;
-}
 
 
 // TABCONTENT
