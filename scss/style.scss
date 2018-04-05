@@ -50,7 +50,7 @@ $skill-height: 200px;
 /*_GENERAL*/
 * {
 	box-sizing: border-box;
-	// outline: 1px solid red;
+	outline: 1px solid red;
 }
 
 body {
@@ -363,7 +363,67 @@ nav {
     
 }
 
+@media #{$phones} {
+	#work {
+		padding: 0;
+	}
+	.work-segment {
+		margin: 0;
+		height:312px;
+		width:100%;
+		img {
+	    	transition: transform 0.6s;
+	    	// object-fit: contain;
+	    	display: inline-block;
+	    }
+	    .work-content {
+			.work-technologies {
+				width: 100%;
+				margin-top: 0;
+				transform: translate(-60%, 0);
+				border-right: none;
+				h6 {
+					padding-top: 10px;
+					text-decoration: underline;
+				}
+				ul {
+					padding: 0;
+					margin: 0 50px;
+					li {
+						display: inline-block;
+						padding: 5px;
 
+					}
+				}
+			}
+			.work-links {
+				width: 100%;
+				top: 40%;
+				right:10px;
+				transform: translate(80%, 0);
+				a {
+					display: inline-block;
+						margin: 0 20px 50px;
+					.fa {
+						font-size: 50px;
+					}
+				}
+				.work-title {
+					font-family: 'Permanent Marker', cursive;
+					color: #FFF;
+					text-shadow: 0 0 1px #555;
+					text-transform: uppercase;
+					width: 100%;
+					bottom: -80%;
+				}
+			}
+		}
+	    &:hover .work-content{
+	    	.work-technologies {transform: translate(0, 0)}
+	    	.work-links {transform: translate(10px, 0)}
+	    }
+	}
+}
 
 
 
