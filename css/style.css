@@ -188,9 +188,9 @@ nav {
   #about .contact-btn {
     background-color: #666; }
     #about .contact-btn:hover {
-      background-color: #000;
+      background-color: #F79F1F;
       box-shadow: 0 0 3px 2px #FFF;
-      text-shadow: 0 0 4px #EEE; }
+      text-shadow: 0 0 4px #000; }
     #about .contact-btn a {
       transition: all 0.4s;
       color: #FFF; }
@@ -205,7 +205,7 @@ nav {
 
 /* SKILLS */
 #skills {
-  background: url("https://images.pexels.com/photos/268883/pexels-photo-268883.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background: url("../images/skills/skills-bg.jpeg");
   padding-right: 50px; }
   #skills h1 {
     color: #F79F1F;
@@ -284,8 +284,8 @@ nav {
   background-color: black;
   /* HERE CHANGE COLOR OF HEX BACKGROUND */
   font-weight: 300;
-  -webkit-transition: -webkit-transform .2s ease-out, opacity .3s ease-out;
-  transition: transform .2s ease-out, opacity .3s ease-out; }
+  -webkit-transition: -webkit-transform .3s ease-out;
+  transition: transform .3s ease-out; }
 
 .hex h1 {
   bottom: 54%;
@@ -314,8 +314,7 @@ nav {
   transform: translate3d(0, 120%, 0); }
 
 /*** HOVER EFFECT  **********************************************************************/
-.hexLink:hover h1, .hexLink:focus h1,
-.hexLink:hover p, .hexLink:focus p {
+.hexLink:hover h1, .hexLink:hover p {
   -webkit-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
