@@ -8,8 +8,7 @@
 @import url("https://fonts.googleapis.com/css?family=Mina|Permanent+Marker|Raleway|Lato");
 /*_GENERAL*/
 * {
-  box-sizing: border-box;
-  outline: 1px solid red; }
+  box-sizing: border-box; }
 
 body {
   margin: 0; }
@@ -160,9 +159,10 @@ nav {
   height: 100vh;
   color: white; }
   #about button {
-    background-color: #fff;
     border: none;
-    border-radius: 2px; }
+    border-radius: 2px;
+    padding: 0;
+    transition: all 0.8s; }
     #about button a {
       display: block;
       padding: 10px;
@@ -171,6 +171,23 @@ nav {
       text-decoration: none;
       font-family: 'Raleway', sans-serif;
       font-weight: bold; }
+  #about .contact-btn {
+    background-color: #666; }
+    #about .contact-btn:hover {
+      background-color: #000;
+      box-shadow: 0 0 3px 2px #FFF;
+      text-shadow: 0 0 4px #EEE; }
+    #about .contact-btn a {
+      transition: all 0.4s;
+      color: #FFF; }
+  #about .download-btn {
+    background-color: #ccc; }
+    #about .download-btn:hover {
+      background-color: #fff;
+      box-shadow: 0 0 3px 1px #FFF;
+      text-shadow: 0 0 4px #333; }
+    #about .download-btn a {
+      color: black; }
 
 /* SKILLS */
 #skills {
