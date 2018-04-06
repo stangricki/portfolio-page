@@ -5,7 +5,7 @@
 /*_NAVIGATION_MENU*/
 /*_NAVIGATION_RIGHT_SIDE*/
 /*_HEADER*/
-@import url("https://fonts.googleapis.com/css?family=Mina|Permanent+Marker|Raleway|Lato");
+@import url("https://fonts.googleapis.com/css?family=Permanent+Marker|Raleway");
 /*_GENERAL*/
 * {
   box-sizing: border-box; }
@@ -113,8 +113,10 @@ nav {
         color: #000; }
 
 /* HOME */
+#home, #about, #skills, #work, #contact-form {
+  margin: 0 60px; }
+
 #home {
-  margin: 0 60px;
   height: 100vh;
   position: relative;
   overflow: hidden; }
@@ -132,7 +134,7 @@ nav {
     left: 25%;
     transform: translate(-50%, -50%); }
     #home .home-slogan .home-slogan-text {
-      font-family: 'Lato', sans-serif;
+      font-family: 'Raleway', sans-serif;
       font-size: 50px;
       color: #FFF;
       text-shadow: 0 0 5px #000; }
@@ -154,10 +156,22 @@ nav {
 
 /* ABOUT */
 #about {
-  padding-top: 5%;
+  font-family: 'Raleway', cursive;
+  padding-top: 2%;
   background-color: #000;
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
   color: white; }
+  #about h3 {
+    color: #F79F1F;
+    font-family: 'Permanent Marker', cursive; }
+  #about .fa {
+    font-size: 35px; }
+  #about iframe {
+    width: 70%;
+    height: 280px; }
+  #about .buttons {
+    margin-top: 20px; }
   #about button {
     border: none;
     border-radius: 2px;
@@ -192,8 +206,10 @@ nav {
 /* SKILLS */
 #skills {
   background: url("https://images.pexels.com/photos/268883/pexels-photo-268883.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-  margin: 0 60px;
   padding-right: 50px; }
+  #skills h1 {
+    color: #F79F1F;
+    font-family: 'Permanent Marker', cursive; }
 
 #hexGrid {
   display: flex;
@@ -366,7 +382,7 @@ nav {
   background-color: #AAA; }
 
 .work-segment {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Raleway', sans-serif;
   margin: 10px;
   height: 312px;
   position: relative;

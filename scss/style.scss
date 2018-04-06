@@ -9,7 +9,7 @@
 /*_HEADER*/
 
 
-@import url('https://fonts.googleapis.com/css?family=Mina|Permanent+Marker|Raleway|Lato');
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Raleway');
 
 //SASS variables
 $tablets: "(min-width: 768px) and (max-width: 1199px)";
@@ -169,9 +169,11 @@ nav {
 }
 
 /* HOME */
-
+#home, #about, #skills, #work, #contact-form {
+	margin: 0 $nav-size-nav;
+}
 #home {
-		margin: 0 $nav-size-nav;
+
 		height: 100vh;
 		position: relative;
 		overflow: hidden;
@@ -190,7 +192,7 @@ nav {
 			left: 25%;
 			transform: translate(-50%, -50%);
 			.home-slogan-text {
-				font-family: 'Lato', sans-serif;
+				font-family: 'Raleway', sans-serif;
 				font-size: 50px;
 				// text-align: center;
 				color: #FFF;
@@ -222,10 +224,24 @@ nav {
 /* ABOUT */
 
 #about {
-	padding-top: 5%;
+	font-family: 'Raleway', cursive;
+	padding-top: 2%;
 	background-color: #000;
-	height: 100vh;
+	height: 100%;
+	min-height: 100vh;
 	color: white;
+	h3 {
+		color: $main-color;
+		font-family: 'Permanent Marker', cursive;
+	}
+	.fa {
+		font-size: 35px;
+	}
+	iframe{
+		width: 70%;
+		height: 280px;
+	}
+	.buttons {margin-top: 20px}
 	button{
 		border: none;
 		border-radius: 2px;
@@ -268,8 +284,11 @@ nav {
 /* SKILLS */
 #skills {
 	background: url('https://images.pexels.com/photos/268883/pexels-photo-268883.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
-	margin: 0 $nav-size-nav;
 	padding-right: 50px;
+	h1{
+		color:$main-color;
+		font-family: 'Permanent Marker', cursive;
+	}
 }
 	#hexGrid {
 	  display: flex;
@@ -446,10 +465,11 @@ nav {
 	text-align: center;
 	padding: 30px;
 	background-color: #AAA;
+
 }
 
 .work-segment {
-	font-family: 'Lato', sans-serif;
+	font-family: 'Raleway', sans-serif;
     margin: 10px;
     height: 312px;
     position: relative;
