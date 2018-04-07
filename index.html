@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="./css/bootstrap.css">
         <!-- <link rel="stylesheet" href="./css/hexagons.css"> -->
         <link rel="stylesheet" href="./css/style.css">
-        <title>Philip Stangricki Portfolio</title>
+        <title>Philip Stangricki | Portfolio</title>
     </head>
 
     <body>
@@ -48,6 +48,20 @@
                 <div class="icon-face"><a href="https://www.facebook.com/filip.stangricki" target="_blank"><i class="fa fa-facebook-f" ></i></a></div>
                 <div class="icon-git"><a href="https://github.com/stangricki" target="_blank"><i class="fa fa-github"></i></a></div>
                 <div class="icon-link"><a href="https://www.linkedin.com/in/filip-stangricki-4241a594/" target="_blank"><i class="fa fa-linkedin"></i></a></div>
+                <div class="icon-cv">
+                    <a href="#" target="blank">
+                        <button 
+                            id="download-cv"
+                            data-toggle="tooltip" 
+                            data-placement="left" 
+                            data-html="true" 
+                            onclick="toggleTooltip()"
+                            title="<button class='btn btn-dark' ><a style='color:#FFF;' href='https://github.com/stangricki/portfolio-page/raw/master/assets/CV%20-%20Filip%20Stangricki%20-%20EN.pdf'>Download CV - English</a></button>
+                            <button class='btn btn-dark'><a style='color:#FFF' href='https://github.com/stangricki/portfolio-page/raw/master/assets/CV%20-%20Filip%20Stangricki%20-%20PL.pdf'>Download CV -   Polish</a></button>"
+                            >
+                        </button>
+                    CV</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -462,12 +476,12 @@
         <!-- CONTACT SECTION -->
         <div class="tabcontent" id="contact-form">
             <div class="row ">
-                <div class="col-6 contact-form">
+                <div class="col-md-6 contact-form">
                     <h1>Contact me</h1>
                     <p>If you have any questions, please don’t hesitate to contact using form below…</p>
-                    <form class="contact">
-                        <input type="text" placeholder="Name" disabled>
-                        <input type="email" placeholder="E-mail" disabled>
+                    <form class="contact mr-xs-5">
+                        <input class="form-subject" type="text" placeholder="Name" disabled>
+                        <input class="form-subject" type="email" placeholder="E-mail" disabled>
                         <input class="form-subject" type="text" placeholder="Subject" disabled>
                         <textarea name="" id="" cols="30" rows="7" placeholder="Your message goes here" disabled></textarea>
                         <button 
@@ -482,20 +496,20 @@
                         </button>
                     </form>
                 </div>
-                <div class="col-6">
+                <div class="col-md-6">
                     <div class="contact-map">
                         <img src="./images/contact/map.jpg" alt="Map">
                     </div>
                     <div class="row contact-info">
-                        <div class="col-sm-4">
+                        <div class="col-sm-12 col-lg-4">
                             <h4>Address</h4>
                             <p>05-860 Józefów</p>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-12 col-lg-4">
                             <h4>Email</h4>
                             <p>stangricki@gmail.com</p>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-12 col-lg-4">
                             <h4>Telephone</h4>
                             <p>(+48) 724 099 469</p>
                         </div>

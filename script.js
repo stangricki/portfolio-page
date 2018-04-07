@@ -21,5 +21,17 @@ $(document).ready(function() {
 
 });
     // Init tooltips
-    $('[data-toggle="tooltip"]').tooltip()
+    $('[data-toggle="tooltip"]').tooltip();
+    $('#download-cv').tooltip('disable')
+    function toggleTooltip() {
+    	$('#download-cv').tooltip('enable')
+        $('#download-cv').tooltip('toggle')
+    }   
+    // function hideTooltip() {
+    //   $('#download-cv').tooltip('hide')
+    // }
+
+
+const cvButton = document.getElementById("download-cv");
+cvButton.addEventListener("mouseover", function(e){console.log(e)})
 
