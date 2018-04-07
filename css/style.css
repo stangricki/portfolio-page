@@ -205,7 +205,7 @@ nav {
 
 /* SKILLS */
 #skills {
-  background: url("../images/skills/skills-bg.jpeg");
+  background: #BBB;
   padding-right: 50px; }
   #skills h1 {
     color: #F79F1F;
@@ -377,8 +377,8 @@ nav {
 /* WORK */
 #work {
   text-align: center;
-  padding: 30px;
-  background-color: #AAA; }
+  padding: 10px;
+  background-color: #BBB; }
 
 .work-segment {
   font-family: 'Raleway', sans-serif;
@@ -492,15 +492,45 @@ nav {
     .work-segment:hover .work-content .work-links {
       transform: translate(10px, 0); } }
 
-.contact {
-  width: 500px;
-  padding: 20px; }
-  .contact input, .contact textarea {
+#contact-form {
+  font-family: 'Raleway',	sans-serif;
+  background-color: #000;
+  color: #FFF;
+  height: 100vh; }
+
+.contact-form {
+  padding: 20px;
+  padding-left: 55px;
+  text-align: center; }
+  .contact-form h1 {
+    color: #F79F1F; }
+  .contact-form input, .contact-form textarea {
     margin: 10px;
     padding: 10px;
     width: 100%; }
-  .contact button {
-    float: right; }
+  .contact-form button {
+    float: right;
+    background: #F79F1F;
+    text-transform: uppercase;
+    font-weight: bold; }
+
+.contact-map {
+  width: 90%;
+  margin: auto;
+  margin-top: 20px; }
+  .contact-map img {
+    width: 100%;
+    border-radius: 5px; }
+
+.contact-info {
+  margin: auto;
+  margin-top: 8%;
+  text-align: center;
+  font-weight: bold;
+  color: #F79F1F; }
+  .contact-info h4 {
+    font-weight: bold;
+    text-transform: uppercase; }
 
 .tabcontent {
   display: none; }

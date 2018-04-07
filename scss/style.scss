@@ -33,6 +33,9 @@ $nav-size-socialIcons: $nav-size-icons * 1.5;
 $main-color: #F79F1F;
 
 $skill-height: 200px;
+$skills-bgc: #BBB;
+
+$work-bgc: #BBB;
 // SASS - Mixins 
 	// NAV Mixins
 
@@ -283,7 +286,7 @@ nav {
 }
 /* SKILLS */
 #skills {
-	background: url('../images/skills/skills-bg.jpeg');
+	background: $skills-bgc;
 	padding-right: 50px;
 	h1{
 		color:$main-color;
@@ -462,8 +465,8 @@ nav {
 /* WORK */
 #work {
 	text-align: center;
-	padding: 30px;
-	background-color: #AAA;
+	padding: 10px;
+	background-color: $work-bgc;
 
 }
 
@@ -621,19 +624,54 @@ nav {
 
 
 // CONTACT FORM
-.contact {
-	width: 500px;
+#contact-form{
+	font-family: 'Raleway',	sans-serif;
+	background-color: #000;
+	color:#FFF;
+	height: 100vh;
+}
+
+
+.contact-form {
 	padding: 20px;
+	padding-left: 55px;
+	text-align: center;
+	h1{
+		color:$main-color;
+	}
 	input, textarea {
 		margin: 10px;
 		padding: 10px;
 		width: 100%;
 	}
 	button {
-		float: right;	
+		float: right;
+		background: $main-color;
+		text-transform: uppercase;	
+		font-weight: bold;
 	}
 }
+.contact-map {
+	width:90%;
+	margin: auto;
+	margin-top: 20px;
 
+	img {width: 100%;border-radius: 5px;}
+}
+.contact-info{
+	margin: auto;
+	margin-top: 8%; 
+	text-align: center;
+	font-weight: bold;
+	color:$main-color;
+	h4{ 
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+	p{
+		
+	}
+}
 
 
 // TABCONTENT

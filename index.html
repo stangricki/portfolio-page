@@ -461,18 +461,49 @@
         
         <!-- CONTACT SECTION -->
         <div class="tabcontent" id="contact-form">
-            <h1>Contact me</h1>
-            <p>If you have any questions, please don’t hesitate to contact using form below…</p>
-            <form class="contact">
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="E-mail">
-                <input class="form-subject" type="text" placeholder="Subject">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Your message goes here"></textarea>
-                <button type="submit"> Send </button>
-            </form>
+            <div class="row ">
+                <div class="col-6 contact-form">
+                    <h1>Contact me</h1>
+                    <p>If you have any questions, please don’t hesitate to contact using form below…</p>
+                    <form class="contact">
+                        <input type="text" placeholder="Name" disabled>
+                        <input type="email" placeholder="E-mail" disabled>
+                        <input class="form-subject" type="text" placeholder="Subject" disabled>
+                        <textarea name="" id="" cols="30" rows="7" placeholder="Your message goes here" disabled></textarea>
+                        <button 
+                            type="submit" 
+                            class="btn" 
+                            data-toggle="tooltip" 
+                            data-placement="top" 
+                            title="" 
+                            data-original-title="The Contact Form is not available yet. Please contact me through email or telephone" 
+                            aria-describedby="tooltip261982">
+                            Send
+                        </button>
+                    </form>
+                </div>
+                <div class="col-6">
+                    <div class="contact-map">
+                        <img src="./images/contact/map.jpg" alt="Map">
+                    </div>
+                    <div class="row contact-info">
+                        <div class="col-sm-4">
+                            <h4>Address</h4>
+                            <p>05-860 Józefów</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <h4>Email</h4>
+                            <p>stangricki@gmail.com</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <h4>Telephone</h4>
+                            <p>(+48) 724 099 469</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    </div>
+
 
         <script src="./js/jquery.min.js"></script>
         <script src="./js/popper.min.js"></script>
