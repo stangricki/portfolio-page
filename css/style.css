@@ -5,7 +5,7 @@
 /*_NAVIGATION_MENU*/
 /*_NAVIGATION_RIGHT_SIDE*/
 /*_HEADER*/
-@import url("https://fonts.googleapis.com/css?family=Permanent+Marker|Raleway");
+@import url("https://fonts.googleapis.com/css?family=Raleway");
 /*_GENERAL*/
 * {
   box-sizing: border-box; }
@@ -179,7 +179,6 @@ nav {
 
 .home-slogan-name {
   color: #F79F1F;
-  font-family: 'Permanent Marker', cursive;
   text-shadow: 0 0 2px #F79F1F; }
 
 /* ABOUT */
@@ -191,8 +190,7 @@ nav {
   min-height: 100vh;
   color: white; }
   #about h3 {
-    color: #F79F1F;
-    font-family: 'Permanent Marker', cursive; }
+    color: #F79F1F; }
   #about .fa {
     font-size: 35px; }
   #about iframe {
@@ -236,8 +234,7 @@ nav {
   background: #BBB;
   padding-right: 50px; }
   #skills h1 {
-    color: #F79F1F;
-    font-family: 'Permanent Marker', cursive; }
+    color: #F79F1F; }
 
 #hexGrid {
   display: flex;
@@ -457,7 +454,6 @@ nav {
             color: #FFF;
             text-shadow: 0 0 3px #DDD; }
       .work-segment .work-content .work-links .work-title {
-        font-family: 'Permanent Marker', cursive;
         color: #FFF;
         text-shadow: 0 0 1px #555;
         text-transform: uppercase;
@@ -509,7 +505,6 @@ nav {
         .work-segment .work-content .work-links a .fa {
           font-size: 50px; }
       .work-segment .work-content .work-links .work-title {
-        font-family: 'Permanent Marker', cursive;
         color: #FFF;
         text-shadow: 0 0 1px #555;
         text-transform: uppercase;
@@ -524,7 +519,8 @@ nav {
   font-family: 'Raleway',	sans-serif;
   background-color: #000;
   color: #FFF;
-  padding-right: 20px; }
+  padding-right: 20px;
+  min-height: 100vh; }
 
 .contact-form {
   text-align: center;

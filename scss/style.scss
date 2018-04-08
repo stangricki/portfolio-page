@@ -9,7 +9,7 @@
 /*_HEADER*/
 
 
-@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Raleway');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 
 //SASS variables
 $tablets: "(min-width: 768px) and (max-width: 1199px)";
@@ -254,7 +254,6 @@ nav {
 	}
 		.home-slogan-name {
 			color: $main-color;
-			font-family: 'Permanent Marker', cursive;
 			text-shadow: 0 0 2px $main-color;
 		}
 
@@ -269,7 +268,6 @@ nav {
 	color: white;
 	h3 {
 		color: $main-color;
-		font-family: 'Permanent Marker', cursive;
 	}
 	.fa {
 		font-size: 35px;
@@ -324,7 +322,6 @@ nav {
 	padding-right: 50px;
 	h1{
 		color:$main-color;
-		font-family: 'Permanent Marker', cursive;
 	}
 }
 	#hexGrid {
@@ -558,7 +555,6 @@ nav {
 				}
 			}
 			.work-title {
-				font-family: 'Permanent Marker', cursive;
 				color: #FFF;
 				text-shadow: 0 0 1px #555;
 				text-transform: uppercase;
@@ -629,7 +625,6 @@ nav {
 					}
 				}
 				.work-title {
-					font-family: 'Permanent Marker', cursive;
 					color: #FFF;
 					text-shadow: 0 0 1px #555;
 					text-transform: uppercase;
@@ -645,24 +640,13 @@ nav {
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 // CONTACT FORM
 #contact-form{
 	font-family: 'Raleway',	sans-serif;
 	background-color: #000;
 	color:#FFF;
 	padding-right: 20px;
+	min-height: 100vh;
 }
 
 
