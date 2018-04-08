@@ -78,12 +78,16 @@ nav {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%); }
+      transform: translate(-50%, -50%);
+      /* 			[class^="icon"]:active a{
+	background-color: #fff;
+	box-shadow: 0 0 20px 10px #000;
+	color: #000;
+} */ }
       nav .right-navigation .social-menu [class^="icon"] {
         line-height: 60px;
         text-align: center; }
-        nav .right-navigation .social-menu [class^="icon"] a {
-          position: relative;
+        nav .right-navigation .social-menu [class^="icon"] > a {
           height: 45px;
           line-height: 45px;
           width: 45px;
@@ -96,17 +100,7 @@ nav {
           transition-duration: .5s;
           border-radius: 50%;
           text-decoration: none; }
-        nav .right-navigation .social-menu [class^="icon"] button {
-          border: none;
-          background-color: transparent;
-          width: 100%;
-          height: 100%;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          border-radius: 50%; }
-        nav .right-navigation .social-menu [class^="icon"]:hover a {
+        nav .right-navigation .social-menu [class^="icon"]:hover > a {
           background-color: #FFF;
           transform: rotateY(360deg);
           border-radius: 50%; }
@@ -119,14 +113,32 @@ nav {
       nav .right-navigation .social-menu [class^="icon-link"]:hover a {
         box-shadow: 0 0 15px 8px #0077B5;
         color: #000; }
-      nav .right-navigation .social-menu [class^="icon-cv"]:hover a {
+      nav .right-navigation .social-menu [class^="icon-cv"]:hover > a {
         box-shadow: 0 0 15px 8px #F79F1F;
         color: #F79F1F;
         text-shadow: 0 0 2px #000; }
-      nav .right-navigation .social-menu [class^="icon"]:active a {
-        background-color: #fff;
-        box-shadow: 0 0 20px 10px #000;
-        color: #000; }
+
+[class^="icon-cv"] {
+  position: relative; }
+  [class^="icon-cv"] .menu-cv {
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 200px;
+    text-align: center;
+    display: none; }
+    [class^="icon-cv"] .menu-cv a {
+      background-color: rgba(34, 34, 34, 0.6);
+      display: block;
+      text-decoration: none;
+      color: #FFF;
+      margin-right: 10px; }
+      [class^="icon-cv"] .menu-cv a:hover {
+        background-color: rgba(34, 34, 34, 0.9);
+        text-shadow: 0 0 2px #FFF; }
+  [class^="icon-cv"]:hover .menu-cv {
+    display: block; }
 
 /* HOME */
 #home, #about, #skills, #work, #contact-form {

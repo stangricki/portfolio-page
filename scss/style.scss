@@ -131,8 +131,7 @@ nav {
 			[class^="icon"] {
 				line-height: $nav-size-nav;
 				text-align: center;
-				a {
-					position: relative;
+				>a {
 					height: $nav-size-socialIcons;
 					line-height: $nav-size-socialIcons;
 					width: $nav-size-socialIcons;
@@ -146,18 +145,7 @@ nav {
 					border-radius: 50%;
 					text-decoration: none;
 				}
-				button {
-					border: none;
-					background-color: transparent;
-					width: 100%;
-					height: 100%;
-					position: absolute;
-					top: 50%;
-					left: 50%;
-					transform: translate(-50%, -50%);
-					border-radius: 50%;
-				}
-				&:hover a {
+				&:hover >a {
 					background-color: #FFF;
 					transform:rotateY(360deg);
 					border-radius: 50%;
@@ -175,18 +163,45 @@ nav {
 				box-shadow: 0 0 15px 8px #0077B5;
 				color: #000;
 			}
-			[class^="icon-cv"]:hover a {
+			[class^="icon-cv"]:hover > a {
 				box-shadow: 0 0 15px 8px $main-color;
 				color: $main-color;
 				text-shadow: 0 0 2px #000;
 			}
 			
-			[class^="icon"]:active a{
-				background-color: #fff;
-				box-shadow: 0 0 20px 10px #000;
-				color: #000;
+/* 			[class^="icon"]:active a{
+	background-color: #fff;
+	box-shadow: 0 0 20px 10px #000;
+	color: #000;
+} */
+		}
+	}
+}
+
+[class^="icon-cv"] {
+	position: relative;
+	.menu-cv {
+		padding: 0;
+		position: absolute;
+		top:0;
+		right:100%;
+		width: 200px;
+		text-align: center;
+		display: none;
+		a{
+			background-color: rgba(34, 34, 34, 0.6);
+			display: block;
+			text-decoration: none;
+			color: #FFF;
+			margin-right: 10px;
+			&:hover {
+				background-color: rgba(34, 34, 34, 0.9);
+				text-shadow: 0 0 2px #FFF;
 			}
 		}
+	}
+	&:hover .menu-cv {
+		display: block;
 	}
 }
 
