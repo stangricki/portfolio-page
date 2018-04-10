@@ -473,13 +473,13 @@
                 <div class="col-md-6 contact-form">
                     <h1>Contact me</h1>
                     <p>If you have any questions, please don’t hesitate to contact using form below…</p>
-                    <form class="contact mr-xs-5">
-                        <input class="form-subject" type="text" placeholder="Name" disabled>
-                        <input class="form-subject" type="email" placeholder="E-mail" disabled>
-                        <input class="form-subject" type="text" placeholder="Subject" disabled>
-                        <textarea name="" id="" cols="30" rows="7" placeholder="Your message goes here" disabled></textarea>
+                    <form class="contact mr-xs-5" method="POST" action="https://formspree.io/stangricki@gmail.com">
+                        <input class="form-subject" type="text" name="name" placeholder="Name">
+                        <input class="form-subject" type="email" name="email" placeholder="E-mail">
+                        <input class="form-subject" type="text" name="subject" placeholder="Subject">
+                        <textarea name="" id="" cols="30" rows="7" name="message" placeholder="Your message goes here"></textarea>
                         <button 
-                        
+                            type="submit"
                             class="btn" 
                             data-toggle="tooltip" 
                             data-placement="top" 
@@ -487,7 +487,7 @@
                             data-original-title="The Contact Form is not available yet. Please contact me through email or telephone" 
                             aria-describedby="tooltip261982">
                             Send
-                        </button><!-- type="submit" --> 
+                        </button>
                     </form>
                 </div>
                 <div class="col-md-6">
