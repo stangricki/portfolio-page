@@ -557,20 +557,46 @@ nav {
 
 .contact-form {
   text-align: center;
-  padding: 20px 60px; }
+  padding: 20px 20px 0 36px; }
   .contact-form h1 {
     color: #F79F1F; }
+  .contact-form .form-part {
+    position: relative; }
+    .contact-form .form-part label {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translate(0%, -50%);
+      color: rgba(255, 255, 255, 0.5);
+      transition: all 0.6s; }
+  .contact-form .form-message label {
+    top: 30px; }
   .contact-form input, .contact-form textarea {
-    margin: 10px;
+    margin: 10px 0;
     padding: 10px;
-    width: 100%; }
+    width: 100%;
+    border: none;
+    color: #FFF;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: #000;
+    transition: border-bottom 0.6s; }
+    .contact-form input:focus, .contact-form textarea:focus {
+      outline: none;
+      border-bottom: 1px solid #F79F1F; }
+    .contact-form input:focus + label, .contact-form input:valid + label, .contact-form textarea:focus + label, .contact-form textarea:valid + label {
+      font-size: 0.8rem;
+      transform: translate(0%, -30%);
+      top: 0;
+      color: rgba(255, 255, 255, 0.75); }
   .contact-form button {
     background: #F79F1F;
     text-transform: uppercase;
-    font-weight: bold; }
-
-.contact-map {
-  margin-left: 15px; }
+    font-weight: bold;
+    transition: all 0.6s; }
+    .contact-form button:hover {
+      color: #FFF;
+      text-shadow: 0 0 3px #FFF;
+      box-shadow: 0 0 3px 2px #FFF; }
 
 #map {
   text-align: center;
@@ -581,12 +607,21 @@ nav {
 .contact-info {
   margin: auto;
   margin-top: 8%;
-  text-align: center;
-  font-weight: bold;
-  color: #F79F1F; }
-  .contact-info h4 {
+  text-align: center; }
+  .contact-info h6 {
     font-weight: bold;
     text-transform: uppercase; }
+  .contact-info p {
+    color: #F79F1F;
+    font-weight: bold; }
+
+@media (max-width: 767px) {
+  #contact-form {
+    padding: 0; }
+  .contact-form {
+    padding-right: 36px; }
+  .contact-map {
+    margin: 0; } }
 
 .tabcontent {
   display: none; }
