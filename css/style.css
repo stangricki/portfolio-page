@@ -506,8 +506,7 @@ nav {
         display: block;
         top: 35%;
         right: 10px;
-        transform: translate(80%, 0);
-        border: 1px solid blue; }
+        transform: translate(80%, 0); }
         .work-segment .work-content .work-links a {
           display: inline-block;
           margin: 0 10% 0; }
