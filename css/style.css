@@ -415,8 +415,7 @@ nav {
   border-radius: 10px;
   box-shadow: 0 0 10px 1px #FFF; }
   .work-segment img {
-    transition: transform 0.6s;
-    object-fit: cover; }
+    transition: transform 0.6s; }
   .work-segment:hover img {
     transform: translate3d(-30px, 0, 0) scale(1.12); }
   .work-segment .work-content {
@@ -453,67 +452,109 @@ nav {
           .work-segment .work-content .work-links a .fa:hover {
             color: #FFF;
             text-shadow: 0 0 3px #DDD; }
-      .work-segment .work-content .work-links .work-title {
-        color: #FFF;
-        text-shadow: 0 0 1px #555;
-        text-transform: uppercase;
-        position: absolute;
-        width: 200px;
-        bottom: -50%;
-        background-color: rgba(247, 159, 31, 0.6);
-        box-shadow: 0 0 3px 1px rgba(247, 159, 31, 0.8);
-        border-radius: 5px; }
+    .work-segment .work-content .work-title {
+      transition: transform 0.6s;
+      color: #FFF;
+      text-shadow: 0 0 1px #555;
+      text-transform: uppercase;
+      position: absolute;
+      width: 200px;
+      transform: translate(100%, 0);
+      bottom: 3%;
+      right: 0%;
+      background-color: rgba(247, 159, 31, 0.6);
+      box-shadow: 0 0 3px 1px rgba(247, 159, 31, 0.8);
+      border-radius: 5px 0 0 5px; }
   .work-segment:hover .work-content {
     opacity: 1; }
     .work-segment:hover .work-content .work-technologies {
       transform: translate(40%, 0); }
     .work-segment:hover .work-content .work-links {
       transform: translate(-100%, 0); }
+    .work-segment:hover .work-content .work-title {
+      transform: translate(0, 0); }
 
 @media (max-width: 767px) {
   #work {
     padding: 0; }
   .work-segment {
     margin: 0;
-    height: 312px;
-    width: 100%; }
+    border-radius: 0;
+    height: 100%; }
     .work-segment img {
       transition: transform 0.6s;
-      display: inline-block; }
-    .work-segment .work-content .work-technologies {
-      width: 100%;
-      margin-top: 0;
-      transform: translate(-60%, 0);
-      border-right: none; }
-      .work-segment .work-content .work-technologies h6 {
-        padding-top: 10px;
-        text-decoration: underline; }
-      .work-segment .work-content .work-technologies ul {
-        padding: 0;
-        margin: 0 50px; }
-        .work-segment .work-content .work-technologies ul li {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%; }
+    .work-segment .work-content {
+      height: 100%; }
+      .work-segment .work-content .work-technologies {
+        width: 100%;
+        height: 50%;
+        margin-top: 0;
+        transform: translate(-60%, 0);
+        border-right: none; }
+        .work-segment .work-content .work-technologies h6 {
+          padding-top: 10px;
+          font-size: 12px;
+          text-decoration: underline; }
+        .work-segment .work-content .work-technologies ul {
+          padding: 0;
+          margin: 0;
+          font-size: 12px; }
+          .work-segment .work-content .work-technologies ul li {
+            display: inline-block;
+            padding: 5px; }
+      .work-segment .work-content .work-links {
+        width: 100%;
+        display: block;
+        top: 35%;
+        right: 10px;
+        transform: translate(80%, 0);
+        border: 1px solid blue; }
+        .work-segment .work-content .work-links a {
           display: inline-block;
-          padding: 5px; }
-    .work-segment .work-content .work-links {
-      width: 100%;
-      top: 40%;
-      right: 10px;
-      transform: translate(80%, 0); }
-      .work-segment .work-content .work-links a {
-        display: inline-block;
-        margin: 0 20px 50px; }
-        .work-segment .work-content .work-links a .fa {
-          font-size: 50px; }
-      .work-segment .work-content .work-links .work-title {
+          margin: 0 10% 0; }
+          .work-segment .work-content .work-links a .fa {
+            font-size: 50px; }
+      .work-segment .work-content .work-title {
+        border-radius: 0;
         color: #FFF;
         text-shadow: 0 0 1px #555;
         text-transform: uppercase;
         width: 100%;
-        bottom: -80%; }
+        bottom: 0; }
     .work-segment:hover .work-content .work-technologies {
       transform: translate(0, 0); }
     .work-segment:hover .work-content .work-links {
       transform: translate(10px, 0); } }
+
+@media (max-width: 450px) {
+  #work {
+    padding: 0; }
+  .work-segment img {
+    width: 120%; }
+  .work-segment .work-content .work-technologies h6 {
+    padding: 5px 0;
+    text-decoration: none; }
+  .work-segment .work-content .work-technologies ul li {
+    padding: 3px 1px;
+    font-size: 11px; }
+  .work-segment .work-content .work-links {
+    top: 42%; }
+    .work-segment .work-content .work-links a {
+      display: inline-block;
+      margin: 0 10% 0; }
+      .work-segment .work-content .work-links a .fa {
+        font-size: 30px; }
+  .work-segment .work-content .work-title {
+    font-size: 10px;
+    bottom: -5%; }
+  .work-segment:hover .work-content .work-technologies {
+    transform: translate(0, 0); }
+  .work-segment:hover .work-content .work-links {
+    transform: translate(10px, 0); } }
 
 #contact-form {
   font-family: 'Raleway',	sans-serif;
