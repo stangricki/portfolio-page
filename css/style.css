@@ -532,9 +532,7 @@ nav {
 
 @media (max-width: 450px) {
   #work {
-    padding: 0; }
-  .work-segment img {
-    width: 120%; }
+    margin: 0 20px; }
   .work-segment .work-content .work-technologies h6 {
     padding: 5px 0;
     text-decoration: none; }
@@ -542,12 +540,12 @@ nav {
     padding: 3px 1px;
     font-size: 11px; }
   .work-segment .work-content .work-links {
-    top: 42%; }
+    top: 38%; }
     .work-segment .work-content .work-links a {
       display: inline-block;
       margin: 0 10% 0; }
       .work-segment .work-content .work-links a .fa {
-        font-size: 30px; }
+        font-size: 40px; }
   .work-segment .work-content .work-title {
     font-size: 10px;
     bottom: -5%; }

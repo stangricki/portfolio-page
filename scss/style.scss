@@ -656,19 +656,16 @@ nav {
 
 @media (max-width:450px) {
 	#work {
-		padding: 0;
+		margin: 0 $nav-size-nav/3;
 	}
 	.work-segment {
-		img {
-		    width: 120%;
-	    }
 	    .work-content {
 			.work-technologies {
 				h6 {
 					padding: 5px 0;
 					text-decoration: none;
 				}
-				ul {	
+				ul {
 					li {
 						padding: 3px 1px;
 						font-size: 11px;
@@ -676,12 +673,12 @@ nav {
 				}
 			}
 			.work-links {
-				top: 42%;
+				top: 38%;
 				a {
 					display: inline-block;
 						margin: 0 10% 0;
 					.fa {
-						font-size: 30px;
+						font-size: 40px;
 					}
 				}
 			}
