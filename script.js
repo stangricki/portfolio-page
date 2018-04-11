@@ -22,3 +22,17 @@ $(document).ready(function() {
 });
     // Init tooltips
     $('[data-toggle="tooltip"]').tooltip();
+
+	// Init map
+function initMap() {
+  var jozefow = {lat: 52.195518, lng: 20.696024};
+  var warsaw = {lat: 52.231634, lng: 21.005885};
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 9,
+    center: warsaw
+  });
+  var marker = new google.maps.Marker({
+    position: jozefow,
+    map: map
+  });
+}

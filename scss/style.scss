@@ -716,11 +716,13 @@ nav {
 	}
 }
 .contact-map {
-	width:90%;
-	margin: auto;
+	margin-left: 15px;
+}
+#map {
+	text-align: center;
 	margin-top: 20px;
-
-	img {width: 100%;border-radius: 5px;}
+    height: 450px;
+    background-color: grey;
 }
 .contact-info{
 	margin: auto;
@@ -747,3 +749,4 @@ nav {
 .tabcontent-active {
 	display:block;
 }
+
