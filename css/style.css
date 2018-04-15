@@ -294,12 +294,16 @@ nav {
 .hex img {
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 160px;
+  width: 85%;
+  height: auto;
   display: inline-block;
   margin: 0 auto;
   -webkit-transform: rotate3d(-50%, 0, 0, 0deg);
   -ms-transform: rotate3d(-50%, 0, 0, 0deg);
   transform: rotate3d(-50%, 0, 0, 0deg); }
+
+.hex .jslogo {
+  width: 70%; }
 
 .hex h1, .hex p {
   width: 100%;
@@ -312,8 +316,8 @@ nav {
   transition: transform .3s ease-out; }
 
 .hex h1 {
-  bottom: 54%;
-  /* SOME WEIRD SHIT HERE */
+  bottom: 49%;
+  /* HOVER SHADOW */
   padding-top: 50%;
   font-size: 1.5em;
   z-index: 1;
@@ -330,8 +334,8 @@ nav {
   text-align: center; }
 
 .hex p {
-  top: 39%;
-  /* SOME WEIRD SHIT HERE */
+  top: 44%;
+  /* HOVER SHADOW */
   padding-bottom: 50%;
   -webkit-transform: translate3d(0, 120%, 0);
   -ms-transform: translate3d(0, 120%, 0);
@@ -342,6 +346,13 @@ nav {
   -webkit-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
+
+/*** HEX CONTENT **********************************************************************/
+.hex h1 {
+  font-size: 19px; }
+
+.hex p {
+  font-size: 12px; }
 
 /*** HEXAGON SIZING AND EVEN ROW INDENTATION *****************************************************************/
 @media (min-width: 1201px) {
@@ -366,7 +377,9 @@ nav {
   .hex:nth-child(5n+4) {
     /* first hexagon of even rows */
     margin-left: 16.666%;
-    /* = width of .hex / 2  to indent even rows */ } }
+    /* = width of .hex / 2  to indent even rows */ }
+  .hex p {
+    font-size: 14px; } }
 
 @media (max-width: 900px) and (min-width: 601px) {
   /* <- 3-2  hexagons per row */
@@ -379,20 +392,25 @@ nav {
     /* first hexagon of even rows */
     margin-left: 25%;
     /* = width of .hex / 2  to indent even rows */ }
-  /* .hex p {font-size: 13px} */ }
+  .hex h1 {
+    font-size: 25px; }
+  .hex p {
+    font-size: 16px;
+    /* do sth with this, maybe remove text through js? */ } }
 
 @media (max-width: 600px) {
   /* <- 2-1  hexagons per row */
   #hexGrid {
     display: block;
     width: 100%; }
+    #hexGrid .hex h1 {
+      font-size: 16px; }
+    #hexGrid .hex p {
+      font-size: 10.5px; }
   .hex {
     position: relative;
-    margin-bottom: 65px;
-    /* fix for jagged edges in FF on hover transition */ }
-  /*** HEX CONTENT **********************************************************************/
-  .hex h1, .hex p {
-    font-size: 11.5px; } }
+    margin-bottom: 30%;
+    /* fix for jagged edges in FF on hover transition */ } }
 
 /* WORK */
 #work {
@@ -614,6 +632,16 @@ nav {
   .contact-info p {
     color: #F79F1F;
     font-weight: bold; }
+    .contact-info p a {
+      display: block;
+      color: inherit;
+      text-decoration: none; }
+  .contact-info .email {
+    padding: 0; }
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .contact-info p {
+    font-size: 0.9em; } }
 
 @media (max-width: 767px) {
   #contact-form {
